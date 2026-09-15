@@ -1,0 +1,44 @@
+# Operating System Files
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# Node & Package Managers (if added in the future)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json.bak
+
+# Build / Output Directories
+dist/
+build/
+out/
+
+# Python Cache & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Temporary / Log files
+*.log
+scratch/
