@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Vishwa N — Cloud & DevOps Engineer. AWS Certified. Building reliable, observable, and cost-efficient cloud infrastructure." />
+  <meta name="keywords" content="Cloud Engineer, DevOps Engineer, AWS, Python, Docker, Vishwa N, Portfolio" />
+  <meta name="author" content="Vishwa N" />
+  <meta property="og:title" content="Vishwa N — Cloud & DevOps Engineer" />
+  <meta property="og:description"
+    content="AWS Certified Cloud Engineer building tools that make infrastructure observable, automated, and cost-efficient." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#09090B" />
+  <title>Vishwa N — Cloud &amp; DevOps Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ─── LOADING / INTRO SCREEN ────────────────────────────────────────── -->
+  <div id="loading-screen" role="dialog" aria-label="Portfolio intro" aria-modal="true">
+    <div class="ls-bg-grid" aria-hidden="true"></div>
+    <div class="ls-glow ls-glow-1" aria-hidden="true"></div>
+    <div class="ls-glow ls-glow-2" aria-hidden="true"></div>
+
+    <div class="ls-inner">
+
+      <h1 class="ls-name" id="lsName">Vishwa N</h1>
+
+      <div class="ls-bar-wrap" id="lsBarWrap">
+        <div class="ls-bar" id="lsBar"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ─── NAV ─────────────────────────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Back to top">
+        <span class="logo-wordmark">Cloud & DevOps<span class="logo-dot"></span></span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#hero" class="nav-link" data-section="hero">Home</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#certificates" class="nav-link" data-section="certificates">Certificates</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <a href="#hero" class="mob-link" id="mobHome">Home</a>
+      <a href="#skills" class="mob-link" id="mobSkills">Skills</a>
+      <a href="#certificates" class="mob-link" id="mobCerts">Certificates</a>
+      <a href="#projects" class="mob-link" id="mobProjects">Projects</a>
+      <a href="#experience" class="mob-link" id="mobExp">Experience</a>
+      <a href="#contact" class="mob-link" id="mobContact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ─── HERO ─────────────────────────────────────────────────────────── -->
+    <section id="hero" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-ambient" aria-hidden="true"></div>
+
+      <div class="hero-split">
+
+        <!-- LEFT: Photo + Stats -->
+        <div class="hero-left reveal">
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-placeholder" id="heroPhoto">
+              <!-- Replace with: <img src="assets/your-photo.jpg" alt="Vishwa N" /> -->
+              <span class="hero-photo-initials">VN</span>
+            </div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="h-stat">
+              <span class="h-stat-num">8.1</span>
+              <span class="h-stat-label">CGPA</span>
+            </div>
+            <div class="h-stat-divider"></div>
+            <div class="h-stat">
+              <span class="h-stat-num">3</span>
+              <span class="h-stat-label">Projects</span>
+            </div>
+            <div class="h-stat-divider"></div>
+            <div class="h-stat">
+              <span class="h-stat-num">6</span>
+              <span class="h-stat-label">Certifications</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Content -->
+        <div class="hero-right">
+          <p class="hero-greeting reveal">Hi, I'm <span class="hero-name-gradient">Vishwa</span></p>
+
+          <div class="hero-role-wrap reveal" aria-live="polite">
+            <span class="hero-role-prefix">—&nbsp;</span>
+            <span class="hero-role-text" id="heroRoleText"></span>
+            <span class="hero-role-cursor" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero-desc reveal">
+            If you're looking for someone who can build infrastructure that's observable,
+            automated, secure and cost-efficient - I'm the one.</p>
+          <p class="hero-desc reveal">
+            AWS Certified - building cloud tools that actually hold up in production.
+          </p>
+
+          <div class="hero-ctas reveal">
+            <a href="assets/resume.pdf" download="Vishwa_N_Resume.pdf" class="hero-btn hero-btn-resume"
+              id="heroResumeBtn" aria-label="Download Vishwa N Resume">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Resume</span>
+            </a>
+            <a href="#contact" class="hero-btn" id="heroContactBtn">Get in Touch</a>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <!-- ─── SKILLS ─────────────────────────────────────────────── -->
+    <section id="skills" aria-labelledby="skillsHeading">
+      <div class="skills-section-wrap">
+        <header class="section-header">
+          <span class="section-label mono-label reveal" aria-hidden="true">// skills & expertise</span>
+          <h2 id="skillsHeading" class="section-title reveal">The roots run deep.</h2>
+          <p class="section-subtitle reveal">An interactive map of my technical landscape</p>
+        </header>
+
+        <!-- Desktop: Interactive D3 Tree Graph -->
+        <div class="skills-graph-wrap reveal">
+          <div id="skills-graph-container" aria-label="Interactive skills tree visualization"></div>
+          <div class="graph-legend">
+            <span class="legend-item"><span class="legend-dot" style="background: var(--accent);"></span>Core
+              Concepts</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #3b82f6;"></span>Programming</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #22c55e;"></span>Version
+              Control</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #f59e0b;"></span>DevOps & Cloud</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #ec4899;"></span>Developer
+              Tools</span>
+          </div>
+        </div>
+
+        <!-- Mobile: Categorized Fallback Grid -->
+        <div class="mobile-skills" aria-label="Skills list">
+
+          <div class="skill-group reveal">
+            <span class="sg-label mono-tiny">Core Concepts</span>
+            <div class="skill-tags">
+              <span class="stag">Computer Networks</span>
+              <span class="stag">Operating Systems</span>
+              <span class="stag">Linux</span>
+              <span class="stag">DSA</span>
+              <span class="stag">OOPS</span>
+              <span class="stag">DBMS</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <span class="sg-label mono-tiny">Programming & Scripting</span>
+            <div class="skill-tags">
+              <span class="stag">Python</span>
+              <span class="stag">Bash</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <span class="sg-label mono-tiny">Version Control</span>
+            <div class="skill-tags">
+              <span class="stag">Git</span>
+              <span class="stag">GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <span class="sg-label mono-tiny">DevOps & Cloud</span>
+            <div class="skill-tags">
+              <span class="stag aws">AWS</span>
+              <span class="stag">Docker</span>
+              <span class="stag">Kubernetes</span>
+              <span class="stag">Containers</span>
+              <span class="stag">Jenkins</span>
+              <span class="stag">GitHub Actions</span>
+              <span class="stag">CI/CD</span>
+              <span class="stag">Terraform</span>
+              <span class="stag">IaC</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <span class="sg-label mono-tiny">Developer Tools & Databases</span>
+            <div class="skill-tags">
+              <span class="stag">VS Code</span>
+              <span class="stag">JetBrains</span>
+              <span class="stag">Jira</span>
+              <span class="stag">n8n</span>
+              <span class="stag">Antigravity</span>
+              <span class="stag">Postman</span>
+              <span class="stag">MongoDB</span>
+              <span class="stag">MySQL</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─── CERTIFICATES ─────────────────────────────────────── -->
+    <section id="certificates" aria-labelledby="certsHeading">
+      <div class="certs-wrap">
+        <header class="section-header">
+          <span class="section-label mono-label reveal" aria-hidden="true">// certifications</span>
+          <h2 id="certsHeading" class="section-title reveal">Verified credentials.</h2>
+        </header>
+
+        <div class="certs-grid reveal">
+
+          <!-- AWS -->
+          <button class="cert-tile" id="certAws" data-pdf="assets/AWS Certified Cloud Practitioner certificate.pdf"
+            data-name="AWS Certified Cloud Practitioner" aria-label="View AWS Certified Cloud Practitioner certificate">
+            <div class="ct-content">
+              <span class="ct-name">AWS Certified Cloud Practitioner</span>
+              <span class="ct-meta">Amazon Web Services · Industry Standard</span>
+            </div>
+            <span class="ct-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <!-- CCNA -->
+          <button class="cert-tile" id="certCcna" data-pdf="assets/CCNA-_Introduction_to_Networks_certificate.pdf"
+            data-name="CCNA: Introduction to Networks" aria-label="View CCNA Introduction to Networks certificate">
+            <div class="ct-content">
+              <span class="ct-name">CCNA: Introduction to Networks</span>
+              <span class="ct-meta">Cisco · Intermediate Level</span>
+            </div>
+            <span class="ct-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <!-- Networking Basics -->
+          <button class="cert-tile" id="certNetBasics" data-pdf="assets/Networking_Basics.pdf"
+            data-name="Networking Basics" aria-label="View Networking Basics certificate">
+            <div class="ct-content">
+              <span class="ct-name">Networking Basics</span>
+              <span class="ct-meta">Cisco · Beginner Level</span>
+            </div>
+            <span class="ct-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <!-- Python -->
+          <button class="cert-tile" id="certPython" data-pdf="assets/python certificate.pdf"
+            data-name="Python Certificate" aria-label="View Python certificate">
+            <div class="ct-content">
+              <span class="ct-name">Python Certificate</span>
+              <span class="ct-meta">Programming & Scripting · Verified</span>
+            </div>
+            <span class="ct-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <!-- LinguvaSkills -->
+          <button class="cert-tile" id="certLingua" data-pdf="assets/Linguvaskills.pdf"
+            data-name="LinguvaSkills — English Proficiency"
+            aria-label="View LinguvaSkills English Proficiency certificate">
+            <div class="ct-content">
+              <span class="ct-name">LinguvaSkills English Proficiency</span>
+              <span class="ct-meta">Communication · Industry Level</span>
+            </div>
+            <span class="ct-arrow" aria-hidden="true">↗</span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─── PROJECTS ─────────────────────────────────────────── -->
+    <section id="projects" aria-labelledby="projectsHeading">
+      <div class="projects-wrap">
+        <header class="section-header">
+          <span class="section-label mono-label reveal" aria-hidden="true">// featured work</span>
+          <h2 id="projectsHeading" class="section-title reveal">Featured Projects.</h2>
+          <p class="section-subtitle reveal">Production-grade solutions engineered for scalability, cloud efficiency,
+            and AI automation.</p>
+        </header>
+
+        <div class="projects-grid reveal">
+
+          <!-- Project 1: SupportNest -->
+          <article class="project-card" id="project-supportnest">
+            <div class="project-card-badge">
+              <span class="proj-tag mono-tiny">AI Project</span>
+            </div>
+
+            <div class="project-card-header">
+              <h3 class="project-title">SupportNest</h3>
+              <p class="project-tagline">Business AI Support Platform</p>
+            </div>
+
+            <p class="project-desc">
+              A Micro-SaaS platform enabling businesses to instantly turn their internal knowledge into a 24/7 custom AI
+              support agent with dedicated URLs & QR code access.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="p-tech-item">AI / LLM</span>
+              <span class="p-tech-item">FastAPI</span>
+              <span class="p-tech-item">Python</span>
+              <span class="p-tech-item">Vector DB / RAG</span>
+              <span class="p-tech-item">QR Access</span>
+            </div>
+
+            <div class="project-card-actions">
+              <button class="proj-btn proj-btn-ghost" id="openSupportNestDetails" aria-haspopup="dialog"
+                aria-controls="projectModal">
+                <span>More Details</span>
+                <span class="proj-btn-icon" aria-hidden="true">→</span>
+              </button>
+
+              <a href="https://github.com/Vishwa-6/ai-support-bot" target="_blank" rel="noopener noreferrer"
+                class="proj-btn proj-btn-secondary" aria-label="View SupportNest GitHub repository">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://ai-support-bot-zeta.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="proj-btn proj-btn-live" aria-label="Open live demo">
+                <span class="live-dot" aria-hidden="true"></span>
+                <span>Live</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: FinOps Sentinel -->
+          <article class="project-card" id="project-finops">
+            <div class="project-card-badge">
+              <span class="proj-tag mono-tiny">Cloud Project · Open Source</span>
+            </div>
+
+            <div class="project-card-header">
+              <h3 class="project-title">FinOps Sentinel</h3>
+              <p class="project-tagline">AI Cloud Cost Detective</p>
+            </div>
+
+            <p class="project-desc">
+              An advanced, open-source AWS cost optimization detective combining 16 deterministic detection rules with
+              Gemini AI to flag cloud infrastructure waste and generate precision remediation steps.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="p-tech-item">AWS FinOps</span>
+              <span class="p-tech-item">Python / Boto3</span>
+              <span class="p-tech-item">Gemini AI</span>
+              <span class="p-tech-item">FastAPI</span>
+              <span class="p-tech-item">WebSockets</span>
+            </div>
+
+            <div class="project-card-actions">
+              <button class="proj-btn proj-btn-ghost" id="openFinOpsDetails" aria-haspopup="dialog"
+                aria-controls="finopsModal">
+                <span>More Details</span>
+                <span class="proj-btn-icon" aria-hidden="true">→</span>
+              </button>
+
+              <a href="https://github.com/Vishwa-6/AI-Cloud-Cost-Detective" target="_blank" rel="noopener noreferrer"
+                class="proj-btn proj-btn-secondary" aria-label="View FinOps Sentinel GitHub repository">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── EXPERIENCE ───────────────────────────────────────── -->
+    <section id="experience" aria-labelledby="expHeading">
+      <div class="exp-wrap">
+        <header class="section-header">
+          <span class="section-label mono-label reveal" aria-hidden="true">// career &amp; background</span>
+          <h2 id="expHeading" class="section-title reveal">Professional Experience.</h2>
+          <p class="section-subtitle reveal">Practical, hands-on industry exposure in core networking, cybersecurity,
+            and Linux systems.</p>
+        </header>
+
+        <div class="exp-timeline reveal">
+
+          <!-- Experience Card: Prompt Infotech -->
+          <div class="exp-card">
+            <div class="exp-card-header">
+              <div class="exp-role-group">
+                <h3 class="exp-role-title">Internship</h3>
+                <h4 class="exp-company-name">Prompt Infotech</h4>
+              </div>
+              <div class="exp-timeline-tag mono-tiny">
+                <span>Domain: Networks &amp; Security</span>
+              </div>
+            </div>
+
+            <div class="exp-card-body">
+              <ul class="exp-bullet-list">
+                <li>
+                  Developed foundational knowledge of computer networking, including <strong>TCP/UDP</strong>,
+                  <strong>IPv4/IPv6</strong>, <strong>DNS</strong>, the <strong>OSI model</strong>, subnetting, and core
+                  networking protocols, with a strong understanding of <strong>IPv4</strong>.
+                </li>
+                <li>
+                  Built a strong understanding of cybersecurity fundamentals, including the <strong>CIA Triad</strong>
+                  (Confidentiality, Integrity, Availability), common types of cyberattacks, malware concepts, phishing
+                  techniques, and identification of malicious/fake URLs.
+                </li>
+                <li>
+                  Gained hands-on exposure to foundational <strong>Linux concepts</strong> and command-line environment
+                  fundamentals.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ──────────────────────────────────────────── -->
+    <section id="contact" aria-labelledby="contactHeading">
+      <div class="contact-section-wrap">
+        <header class="section-header contact-center">
+          <span class="section-label mono-label reveal" aria-hidden="true">// get in touch</span>
+          <h2 id="contactHeading" class="section-title reveal">Let's work together.</h2>
+          <p class="section-subtitle reveal" style="margin: 0 auto;">
+            Open to cloud &amp; DevOps opportunities. Feel free to reach out — I read every message.
+          </p>
+        </header>
+
+        <div class="contact-body reveal">
+          <div class="contact-links-grid">
+
+            <!-- Email -->
+            <a href="mailto:vishwa06n@gmail.com" class="contact-card" id="contactEmail" aria-label="Send email to Vishwa N">
+              <div class="cc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div class="cc-text">
+                <span class="cc-type mono-tiny">Email</span>
+                <span class="cc-val">vishwa06n@gmail.com</span>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/vishwa63/" target="_blank" rel="noopener noreferrer" class="contact-card" id="contactLinkedin" aria-label="Visit Vishwa N on LinkedIn">
+              <div class="cc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </div>
+              <div class="cc-text">
+                <span class="cc-type mono-tiny">LinkedIn</span>
+                <span class="cc-val">linkedin.com/in/vishwa63</span>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/Vishwa-6/" target="_blank" rel="noopener noreferrer" class="contact-card" id="contactGithub" aria-label="Visit Vishwa N on GitHub">
+              <div class="cc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </div>
+              <div class="cc-text">
+                <span class="cc-type mono-tiny">GitHub</span>
+                <span class="cc-val">github.com/Vishwa-6</span>
+              </div>
+            </a>
+
+            <!-- Location -->
+            <div class="contact-card contact-card-static" id="contactLocation">
+              <div class="cc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="cc-text">
+                <span class="cc-type mono-tiny">Location</span>
+                <span class="cc-val">Tamil Nadu, India</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ─── FOOTER ───────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <span class="mono-tiny">// vishwa n · cloud &amp; devops engineer · 2026</span>
+
+    </div>
+  </footer>
+
+  <!-- ─── CERT LIGHTBOX ──────────────────────────────────── -->
+  <div id="certLightbox" class="cert-lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer" hidden>
+    <div class="clb-backdrop" id="clbBackdrop"></div>
+    <div class="clb-panel">
+      <div class="clb-header">
+        <span class="clb-title mono-label" id="clbTitle"></span>
+        <button class="clb-close" id="clbClose" aria-label="Close certificate">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <iframe class="clb-frame" id="clbFrame" title="Certificate PDF" src="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <!-- ─── PROJECT 1 DETAILS MODAL (SupportNest) ─────────── -->
+  <div id="projectModal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="pmTitle" hidden>
+    <div class="pm-backdrop" id="pmBackdrop"></div>
+    <div class="pm-panel">
+
+      <!-- Modal Header -->
+      <div class="pm-header">
+        <div class="pm-header-info">
+          <span class="mono-tiny pm-badge">// AI Project · Micro-SaaS</span>
+          <h2 id="pmTitle" class="pm-title">SupportNest</h2>
+          <p class="pm-subtitle">Business AI Customer Support Platform</p>
+        </div>
+        <button class="pm-close" id="pmClose" aria-label="Close project details">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="pm-body">
+
+        <!-- Section: Overview -->
+        <div class="pm-section">
+          <h4 class="pm-section-title">Overview</h4>
+          <p class="pm-text">
+            <strong>SupportNest</strong> is a Micro-SaaS customer support platform that allows any business to transform
+            their static company knowledge (pricing, policies, services, working hours, FAQs) into an interactive
+            <strong>24/7 intelligent AI support assistant</strong> with zero technical setup required.
+          </p>
+        </div>
+
+        <!-- Section: The Problem & Solution -->
+        <div class="pm-grid-2">
+          <div class="pm-card-sub">
+            <h5 class="pm-sub-heading text-danger">⚠️ The Business Problem</h5>
+            <ul class="pm-bullet-list">
+              <li>Small businesses can't afford 24/7 dedicated support teams.</li>
+              <li>Repetitive customer queries consume over 60% of daily resources.</li>
+              <li>Slow response times lead to high customer drop-off and lost sales.</li>
+            </ul>
+          </div>
+
+          <div class="pm-card-sub">
+            <h5 class="pm-sub-heading text-accent">✨ The SupportNest Solution</h5>
+            <ul class="pm-bullet-list">
+              <li>Instant onboarding with dynamic knowledge base ingestion.</li>
+              <li>Auto-generated unique chatbot share links & QR codes.</li>
+              <li>Context-aware, zero-hallucination responses based on uploaded data.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section: How It Works -->
+        <div class="pm-section">
+          <h4 class="pm-section-title">How It Works (Workflow)</h4>
+          <div class="pm-workflow-steps">
+            <div class="pm-step">
+              <span class="pm-step-num">01</span>
+              <div>
+                <strong>Register & Setup</strong>
+                <p>Business creates an account and sets up their support profile.</p>
+              </div>
+            </div>
+            <div class="pm-step">
+              <span class="pm-step-num">02</span>
+              <div>
+                <strong>Upload Knowledge</strong>
+                <p>Feed business FAQs, services, and policies into the system.</p>
+              </div>
+            </div>
+            <div class="pm-step">
+              <span class="pm-step-num">03</span>
+              <div>
+                <strong>Generate Chatbot & QR</strong>
+                <p>Platform produces a dedicated link and scannable QR code.</p>
+              </div>
+            </div>
+            <div class="pm-step">
+              <span class="pm-step-num">04</span>
+              <div>
+                <strong>24/7 Instant Support</strong>
+                <p>Customers get real-time answers; owners review conversation logs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Key Tech Stack -->
+        <div class="pm-section">
+          <h4 class="pm-section-title">Technology & Architecture</h4>
+          <div class="pm-tech-tags">
+            <span class="pm-tech-chip">Python</span>
+            <span class="pm-tech-chip">FastAPI</span>
+            <span class="pm-tech-chip">AI & LLM Ingestion</span>
+            <span class="pm-tech-chip">RAG Architecture</span>
+            <span class="pm-tech-chip">Vector Embeddings</span>
+            <span class="pm-tech-chip">QR Code Generator</span>
+            <span class="pm-tech-chip">RESTful APIs</span>
+            <span class="pm-tech-chip">Cloud Ready</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── PROJECT 2 DETAILS MODAL (FinOps Sentinel) ────── -->
+  <div id="finopsModal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="finopsTitle" hidden>
+    <div class="pm-backdrop" id="finopsBackdrop"></div>
+    <div class="pm-panel">
+
+      <!-- Modal Header -->
+      <div class="pm-header">
+        <div class="pm-header-info">
+          <span class="mono-tiny pm-badge">// Cloud Project · FinOps & AI</span>
+          <h2 id="finopsTitle" class="pm-title">FinOps Sentinel</h2>
+          <p class="pm-subtitle">AI Cloud Cost Detective & Waste Analyzer</p>
+        </div>
+        <button class="pm-close" id="finopsClose" aria-label="Close project details">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="pm-body">
+
+        <!-- Section: Overview -->
+        <div class="pm-section">
+          <h4 class="pm-section-title">Overview</h4>
+          <p class="pm-text">
+            <strong>FinOps Sentinel</strong> is an open-source, AI-powered AWS cost intelligence engine. It leverages a
+            <strong>hybrid architecture</strong>: a deterministic Python rules engine to audit cloud infrastructure
+            waste across 12 AWS resource types with 100% accuracy, paired with <strong>Google Gemini AI</strong> to
+            automatically generate step-by-step remediation plans.
+          </p>
+        </div>
+
+        <!-- Section: The Problem & Solution -->
+        <div class="pm-grid-2">
+          <div class="pm-card-sub">
+            <h5 class="pm-sub-heading text-danger">⚠️ The Cloud Cost Problem</h5>
+            <ul class="pm-bullet-list">
+              <li>Over 30% of cloud spend is wasted on idle/unattached resources.</li>
+              <li>Orphaned EBS volumes, unattached Elastic IPs, and idle NAT gateways generate silent bills.</li>
+              <li>Engineers lack automated, risk-free audits with clear remediation steps.</li>
+            </ul>
+          </div>
+
+          <div class="pm-card-sub">
+            <h5 class="pm-sub-heading text-accent">✨ The FinOps Sentinel Solution</h5>
+            <ul class="pm-bullet-list">
+              <li><strong>16 Deterministic Rules</strong> across 4 severity tiers (Critical to Low).</li>
+              <li><strong>Hybrid AI Architecture:</strong> Deterministic detection + AI remediation.</li>
+              <li><strong>Strict Least Privilege:</strong> 100% read-only scan (zero risk to production).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section: Key Capabilities -->
+        <div class="pm-section">
+          <h4 class="pm-section-title">Detection & Auditing Capabilities</h4>
+          <div class="pm-workflow-steps">
+            <div class="pm-step">
+              <span class="pm-step-num">COMPUTE</span>
+              <div>
+                <strong>EC2 & NAT Gateways</strong>
+                <p>Detects idle instances (CPU &lt; 5%), oversized dev instances, and 0-traffic NAT gateways.</p>
+              </div>
+            </div>
+            <div class="pm-step">
+              <span class="pm-step-num">STORAGE</span>
+              <div>
+                <strong>EBS & Snapshots</strong>
+                <p>Finds unattached volumes, costly io1 tiers, and orphaned snapshots older than 90 days.</p>
+              </div>
+            </div>
+            <div class="pm-step">
+              <span class="pm-step-num">DATABASE</span>
+              <div>
+                <strong>RDS & DynamoDB</strong>
+                <p>Audits over-provisioned storage (&gt; 80% free), oversized instances, and high RCU/WCU.</p>
+              </div>
+            </div>
+            <div class="pm-step">
+              <span class="pm-step-num">REAL-TIME</span>
+              <div>
+                <strong>WebSockets & UI</strong>
+                <p>Live scan progress over WebSockets, donut charts, CSV export, and scan history in SQLite.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Key Tech Stack -->
+        <div class="pm-section">
+          <h4 class="pm-section-title">Technology & Architecture</h4>
+          <div class="pm-tech-tags">
+            <span class="pm-tech-chip">Python</span>
+            <span class="pm-tech-chip">Boto3 (AWS SDK)</span>
+            <span class="pm-tech-chip">FastAPI</span>
+            <span class="pm-tech-chip">Google Gemini AI</span>
+            <span class="pm-tech-chip">WebSockets</span>
+            <span class="pm-tech-chip">SQLite / SQLAlchemy</span>
+            <span class="pm-tech-chip">Deterministic Engine</span>
+            <span class="pm-tech-chip">JWT / Bcrypt</span>
+            <span class="pm-tech-chip">AWS IAM Security</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
