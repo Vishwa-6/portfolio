@@ -178,7 +178,7 @@ function initSmoothScroll() {
 
 /* ─── SUBTLE CARD TILT ON MOUSE MOVE ─────────────────────── */
 function initCardTilt() {
-  const cards = document.querySelectorAll('.proj-card');
+  const cards = document.querySelectorAll('.project-card, .proj-card');
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
@@ -262,6 +262,12 @@ function initProjectModal() {
       openBtnId: 'openFinOpsDetails',
       closeBtnId: 'finopsClose',
       backdropId: 'finopsBackdrop'
+    },
+    {
+      modalId: 'cloudSecModal',
+      openBtnId: 'openCloudSecDetails',
+      closeBtnId: 'cloudSecClose',
+      backdropId: 'cloudSecBackdrop'
     }
   ];
 
